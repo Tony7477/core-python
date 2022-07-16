@@ -1,13 +1,12 @@
 #useful for code reusability
 class Employee:
+    #class variables
     num_employees=0
-
-
     raise_amount=1.04
 
 
     def __init__(self,firstname,pay):
-        #attributes
+        #attributes or instance variables
         self.firstname=firstname
         self.pay=pay
         self.email=firstname+'.'+'@gmail.com'
@@ -34,6 +33,7 @@ Employee.raise_amount=1.05
 
 emp_1.raise_amount=1.06
 print(emp_1.__dict__)
+print(Employee.__dict__)
 emp_1.apply_raise()
 print(emp_1.pay)
 
